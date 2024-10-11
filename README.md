@@ -35,3 +35,12 @@
 
 
 #### Listes des fonctions page Fournisseur
+
+1. [ ] Page de profils
+2. [ ] Page des candidatures
+3. [ ] Page d'accueil
+4. [ ] Page des documents
+5. [ ] page des propriétés 
+
+
+ 
