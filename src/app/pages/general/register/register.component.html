@@ -1,1 +1,273 @@
-<p>register works!</p>
+<div class="body_bg">
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
+  <div class="container">
+    <header>Registration</header>
+    <div class="toggle" style="display: flex; margin: auto; width:900px; justify-content: space-evenly;">
+      <div onclick="HandleToggle('Locataire')" >
+        <input
+          type="radio"
+          id="Locataire"
+          name="typeOfAccount"
+          value="Locataire"
+          checked
+        />
+        <label style="margin-left: 10px;" for="Locataire">Locataire</label>
+      </div>
+
+      <div (click)="HandleToggle('Proprietaire')">
+        <input
+          type="radio"
+          id="Proprietaire"
+          name="typeOfAccount"
+          value="Proprietaire"
+        />
+        <label style="margin-left: 10px;" for="Proprietaire">Proprietaire</label>
+      </div>
+    </div>
+
+    <form *ngIf="toggleValue=='Locataire'" action="#" (submit)="handleSubmit()">
+      <div class="form first">
+        <div class="details personal">
+          <span class="title">Personal Details</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Nom</label>
+              <input type="text" placeholder="Votre nom" required />
+            </div>
+            <div class="input-field">
+              <label>Prenom</label>
+              <input type="text" placeholder="Votre Prenom" required />
+            </div>
+            <div class="input-field">
+              <label>Date de Naissance</label>
+              <input type="date" placeholder="Date de Naissance" required />
+            </div>
+            <div class="input-field">
+              <label>Email</label>
+              <input type="text" placeholder="Votre email" required />
+            </div>
+            <div class="input-field">
+              <label>Numéro de Telephone</label>
+              <input
+                type="number"
+                placeholder=" Votre Numéro de Telephone"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <label>Genre</label>
+              <select required>
+                <option disabled selected>Selectionner votre genre</option>
+                <option>Homme</option>
+                <option>Femme</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="details ID">
+          <span class="title">Informations sur l'Identité</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Type de Pièce</label>
+              <select required>
+                <option disabled selected>Selectionnez un type</option>
+                <option>CNI</option>
+                <option>Passport</option>
+                <option>Attestation</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label>Numéro de la pièce</label>
+              <input type="number" placeholder="Numero de la piece" required />
+            </div>
+
+            <div class="input-field">
+              <label>Face Recto </label>
+              <input type="file" placeholder="le recto de la piece" required />
+            </div>
+            <div class="input-field">
+              <label>Face Verso</label>
+              <input type="file" placeholder="le verso de la piece" required />
+            </div>
+            <div class="input-field">
+              <label>Date d'</label>
+              <input type="date" placeholder="La date d'expiration" required />
+            </div>
+            <div class="input-field">
+              <label>Date d'expiration</label>
+              <input type="date" placeholder="La date d'expiration" required />
+            </div>
+          </div>
+          <button class="submit">
+            <span class="btnText">S'inscrire</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <form *ngIf="toggleValue == 'Proprietaire'" action="#">
+      <div class="form first">
+        <div class="details personal">
+          <span class="title">Personal Details</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Nom</label>
+              <input type="text" placeholder="Votre nom" required />
+            </div>
+            <div class="input-field">
+              <label>Prenom</label>
+              <input type="text" placeholder="Votre Prenom" required />
+            </div>
+            <div class="input-field">
+              <label>Date de Naissance</label>
+              <input type="date" placeholder="Date de Naissance" required />
+            </div>
+            <div class="input-field">
+              <label>Email</label>
+              <input type="text" placeholder="Votre email" required />
+            </div>
+            <div class="input-field">
+              <label>Numéro de Telephone</label>
+              <input
+                type="number"
+                placeholder=" Votre Numéro de Telephone"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <label>Genre</label>
+              <select required>
+                <option disabled selected>Selectionner votre genre</option>
+                <option>Homme</option>
+                <option>Femme</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="details ID">
+          <span class="title">Informations sur l'Identité</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Type de Pièce</label>
+              <select required>
+                <option disabled selected>Selectionnez un type</option>
+                <option>CNI</option>
+                <option>Passport</option>
+                <option>Attestation</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label>Numéro de la pièce</label>
+              <input type="number" placeholder="Numero de la piece" required />
+            </div>
+
+            <div class="input-field">
+              <label>Face Recto </label>
+              <input type="file" placeholder="le recto de la piece" required />
+            </div>
+            <div class="input-field">
+              <label>Face Verso</label>
+              <input type="file" placeholder="le verso de la piece" required />
+            </div>
+            <div class="input-field">
+              <label>Date d'</label>
+              <input type="date" placeholder="La date d'expiration" required />
+            </div>
+            <div class="input-field">
+              <label>Date d'expiration</label>
+              <input type="date" placeholder="La date d'expiration" required />
+            </div>
+          </div>
+          <button class="nextBtn">
+            <span class="btnText">Next</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+        </div>
+      </div>
+      <div class="form second">
+        <div class="details address">
+          <span class="title">Address Details</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Address Type</label>
+              <input
+                type="text"
+                placeholder="Permanent or Temporary"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <label>Nationality</label>
+              <input type="text" placeholder="Enter nationality" required />
+            </div>
+            <div class="input-field">
+              <label>State</label>
+              <input type="text" placeholder="Enter your state" required />
+            </div>
+            <div class="input-field">
+              <label>District</label>
+              <input type="text" placeholder="Enter your district" required />
+            </div>
+            <div class="input-field">
+              <label>Block Number</label>
+              <input type="number" placeholder="Enter block number" required />
+            </div>
+            <div class="input-field">
+              <label>Ward Number</label>
+              <input type="number" placeholder="Enter ward number" required />
+            </div>
+          </div>
+        </div>
+        <div class="details family">
+          <span class="title">Family Details</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Father Name</label>
+              <input type="text" placeholder="Enter father name" required />
+            </div>
+            <div class="input-field">
+              <label>Mother Name</label>
+              <input type="text" placeholder="Enter mother name" required />
+            </div>
+            <div class="input-field">
+              <label>Grandfather</label>
+              <input type="text" placeholder="Enter grandfther name" required />
+            </div>
+            <div class="input-field">
+              <label>Spouse Name</label>
+              <input type="text" placeholder="Enter spouse name" required />
+            </div>
+            <div class="input-field">
+              <label>Father in Law</label>
+              <input type="text" placeholder="Father in law name" required />
+            </div>
+            <div class="input-field">
+              <label>Mother in Law</label>
+              <input type="text" placeholder="Mother in law name" required />
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="backBtn">
+              <i class="uil uil-navigator"></i>
+              <span class="btnText">Back</span>
+            </div>
+
+            <button class="sumbit">
+              <span class="btnText">Submit</span>
+              <i class="uil uil-navigator"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
