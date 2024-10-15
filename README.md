@@ -19,7 +19,7 @@
     * [ ] Mise en place de la recherche
 
 2. [ ] Page de details
-    * [ ] Affichage des proprietes 
+    * [x] Affichage des proprietes 
     * [ ] Mise en place du filtre 
     * [ ] Mise en place du carousel
     * [ ] Mise en place de l'affichage des proprietes similaires
